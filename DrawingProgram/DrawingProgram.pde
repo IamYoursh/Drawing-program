@@ -1,18 +1,31 @@
 //Global Variables
+color ink, black = #000000;
+float controlPannelX, controlPannelY, controlPannelWidth, controlPannelHeight;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight;
 float drawingDiameter;
 Boolean draw=false;
-color ink, black = #000000;
+
+
+
 
 void setup() {
-  size(800, 600);
+  size(850, 600);
   quitButtonSetup();
+  //
+  rect(controlPannelX, controlPannelY, controlPannelWidth, controlPannelHeight);
+  //
+  controlPannelX = width*0;
+  controlPannelY = height*0;
+  controlPannelWidth = width*4/4;
+  controlPannelHeight = height*6/6;
+  //
   drawingSurfaceX = width*0;
   drawingSurfaceY = height*0;
-  drawingSurfaceWidth = width*3/4;
-  drawingSurfaceHeight = height*4/5;
-
+  drawingSurfaceWidth = width*4/4;
+  drawingSurfaceHeight = height*4/6;
+  //
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight); //drawingSurface
+  //
 }//End setup
 
 
@@ -36,7 +49,7 @@ void mousePressed() {
       draw = false;
     }//End IF
     ink = black;
-    drawingDiameter = width*1/100;
+    drawingDiameter = width*1/50;
   }//End If
 }//End mousePressed
 
