@@ -5,8 +5,7 @@ float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeigh
 float drawingDiameter;
 Boolean draw=false;
 
-
-
+//space
 
 void setup() {
   size(850, 600);
@@ -21,8 +20,8 @@ void setup() {
   //
   drawingSurfaceX = width*0;
   drawingSurfaceY = height*0;
-  drawingSurfaceWidth = width*4/4;
-  drawingSurfaceHeight = height*4/6;
+  drawingSurfaceWidth = width*4.7/6;
+  drawingSurfaceHeight = height*6/6;
   //
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight); //drawingSurface
   //
@@ -49,7 +48,7 @@ void mousePressed() {
       draw = false;
     }//End IF
     ink = black;
-    drawingDiameter = width*1/50;
+    drawingDiameter = width*0.5/50;
   }//End If
 }//End mousePressed
 
