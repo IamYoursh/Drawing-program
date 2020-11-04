@@ -2,6 +2,7 @@
 color ink, black = #000000;
 float controlPannelX, controlPannelY, controlPannelWidth, controlPannelHeight;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight;
+float pt1X, pt1Y, rectWidth, rectHeight;
 float drawingDiameter;
 Boolean draw=false;
 
@@ -25,21 +26,30 @@ void setup() {
   //
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight); //drawingSurface
   //
+  rectWidth = width * 0.9/4;
+  rectHeight = height * 4/4;
+  pt1X = width * 3.13/4;
+  pt1Y = height * 0/4;
+  //
 }//End setup
 
 
+
 void draw() {
-  quitButtonDraw();
   //
   if (draw == true) {
-    fill(ink);
-    ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
-  }//End IF
-}//End draw
+   fill(ink);
+   ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
+  }
+  //
+  rect(pt1X, pt1Y, rectWidth, rectHeight);
+  //
+  quitButtonDraw();
+}
+
 
 
 void mousePressed() {
-  quitButtonMouseClicked();
   //
   if (mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight) { 
     if (draw == false) {
@@ -49,8 +59,11 @@ void mousePressed() {
     }//End IF
     ink = black;
     drawingDiameter = width*0.5/50;
-  }//End If
-}//End mousePressed
+  }
+  //
+  quitButtonMouseClicked();
+}
+
 
 
 void keyPressed() {
