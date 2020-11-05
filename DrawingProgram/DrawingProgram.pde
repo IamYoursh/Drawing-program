@@ -27,7 +27,7 @@ void setup() {
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight); //drawingSurface
   //
   rectWidth = width * 0.9/4;
-  rectHeight = height * 4/4;
+  rectHeight = height * 0.2/4;
   pt1X = width * 3.13/4;
   pt1Y = height * 0/4;
   //
